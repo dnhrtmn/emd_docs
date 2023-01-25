@@ -27,7 +27,7 @@ First we need to configure the grasp execution launch file. In :code:`/workcell_
 
 Scene URDF File
 -------------------------------
-In :code:`/workcell_ws/src/scenes/new_scene/urdf/scene.urdf.xacro`, add the following lines *before* the :code:`robot` tag:
+In :code:`/workcell_ws/src/scenes/new_scene/urdf/scene.urdf.xacro`, add the following lines *before* the :code:`</robot>` tag:
 
 .. code-block:: bash
 
@@ -71,14 +71,14 @@ This terminal runs the manipulation workspace simulation. First, source all rele
 .. code-block:: bash
 
    source /opt/ros/foxy/setup.bash
-   source ~/moveit2_ws/install/setup.bash
+   source ~/ws_moveit2/install/setup.bash
    source install/setup.bash
 
 Next, launch the grasp execution component.
 
 .. code-block:: bash
 
-   ros2 launch grasp_execution grasp_execution_launch.py
+   ros2 launch grasp_execution grasp_execution.launch.py
 
 You should then see rviz launch and the scene.
 
